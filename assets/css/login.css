@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+*{
+  margin: 0px;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
 }
 
 body,
@@ -176,7 +183,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background: linear-gradient(335deg, rgba(0, 54, 65, 1) 0%, rgba(1, 90, 82, 1) 85%);
+  background: linear-gradient(335deg, rgb(0, 54, 65) 0%, rgba(1, 90, 82, 1) 85%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
