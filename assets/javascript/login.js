@@ -229,22 +229,37 @@ function cadastrar(event){
   const btnCadastro = document.querySelector('.btn')
 
   if(validLoginT && validEmailT && validEmailConfirmT && validCPFT && validCell == true){
-    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
 
-    listaUser.push({
-      nomeCad: nameInput.value,
-      emailCad: emailInput.value,
-      telCad: cellphoneInput.value,
+    const data = {
+      Nome: nameInput.value,
+      Email: emailInput.value,
+      Cpf: cpfInput.value,
+      Cell: cellphoneInput.value,
+    }
+
+    fetch("http://localhost:9999/categorias", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((response) => response.json())
+    .then((result) => {
+      Swal.fire({
+        icon: 'success',
+        title: 'Usuário Cadastrado',
+        text: 'As suas informações foram enviadas para a equipe de tecnologia da empresa para serem cadastradas.',
+        footer: 'Informações de acesso serão disponibilizadas via e-mail.',
     })
-
-    localStorage.setItem('listaUsers', JSON.stringify(listaUser))
-
-    Swal.fire({
-      icon: 'success',
-      title: 'Usuário Cadastrado',
-      text: 'As suas informações foram enviadas para a equipe de tecnologia da empresa para serem cadastradas.',
-      footer: 'Informações de acesso serão disponibilizadas via e-mail.',
     })
+    .catch((error) => {
+      Swal.fire({
+      icon: 'error',
+      title: 'Problema Verificado',
+      text: 'Contate um administrador para a resolução do problema.',
+      footer: '<a href="">Clique aqui e tente novamente.</a>'
+    })
+    });
   }
   else{
     Swal.fire({
