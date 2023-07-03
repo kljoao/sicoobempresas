@@ -1,5 +1,7 @@
 const nameInput = document.querySelector("#name");
 
+const corporateName = document.querySelector('.corporate-name');
+
 const emailInvalido = document.querySelector('.invalidEmail')
 const emailColor = document.querySelector('.emailColor');
 const emailInput = document.querySelector('.emailInput');
@@ -67,7 +69,6 @@ nameInput.addEventListener('keyup', () => {
 
 function checkCPF(){
 //MASCARA CPF
-const corporateName = document.querySelector('.corporate-name');
 
 corporateName.addEventListener('keypress', () => {
   let cpfLength = corporateName.value.length;
@@ -233,12 +234,13 @@ function cadastrar(event){
     const data = {
       Nome: nameInput.value,
       Email: emailInput.value,
-      Cpf: cpfInput.value,
+      Cpf: corporateName.value,
       Cell: cellphoneInput.value,
     }
 
-    fetch("http://localhost:9999/categorias", {
+    fetch("https://localhost:7232/Categorias", {
       method: "POST",
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json'
       },
