@@ -1,0 +1,51 @@
+.ramal-princ{
+    margin: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.ramal-card-container{
+    text-align: center;
+}
+
+.ramal-top{
+    padding: 10px;
+    width: 300px;
+    background-color: #00AE9D;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.ramal-n{
+    margin: 20px 0px 0px 0px;
+    padding: 10px;
+}
+
+.ramal-bottom{
+    padding: 1px;
+    background-color: aliceblue;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.ramal-email{
+    border-top: 1px solid rgba(0, 0, 0, 0.336);
+    padding: 10px;
+}
+
+.ramal-telefone{
+    margin-bottom: 15px;
+}
+
+.ramais-search-container{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.ramais-search{
+    margin-top: 10px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 50px;
+    width: 450px;
+    height: 40px;
+}

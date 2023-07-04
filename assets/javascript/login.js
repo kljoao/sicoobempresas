@@ -234,7 +234,6 @@ function cadastrar(event){
     const data = {
       Nome: nameInput.value,
       Email: emailInput.value,
-      Cpf: corporateName.value,
       Cell: cellphoneInput.value,
     }
 

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<body class="choose-body">
+<body class="choose-body" onload="listar()">
 
     <header class="choose-header">
 
@@ -52,18 +52,28 @@
                 </button>
 
                 <div class="choose-user-opt">
-                    <a href=""><p>Inicio</p></a>
-                    <a href=""><p>Sair</p></a>
+                    <a href="choose.html"><p>Inicio</p></a>
+                    <a href="adm.html"><p>Administração</p></a>
+                    <a href="../index.html"><p>Sair</p></a>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-        
+
+        <div class="ramais-search-container">
+            <h1 class="big-white-normal">BUSCAR RAMAL</h1>
+            <input type="search" class="ramais-search" placeholder="Digite o nome, setor ou ramal para localizar o(a) colaborador(a)">
+        </div>
+
+    <div class="ramal-princ">
+
+        </div>
     </main>
 
     <script src="../assets/javascript/choose.js"></script>
+    <script src="../assets/javascript/ramais.js"></script>
 </body>
 
 </html>
