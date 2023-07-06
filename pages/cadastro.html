@@ -26,12 +26,12 @@
 
         <nav class="choose-nav">
             <div class="choose-nav-container">
-                <a href="choose.html"><img src="../img/logo.png" alt="" width="150px"></a>
+                <a href="../index.html"><img src="../img/logo.png" alt="" width="150px"></a>
 
                 <div>
                     <ul class="choose-nav-list">
                         <li>
-                            <a href="choose.html">Início</a>
+                            <a href="../index.html">Início</a>
                         </li>
                         <li>
                             <a href="#">Ramais</a>
@@ -51,44 +51,63 @@
                     </ul>
                 </div>
             </div>
-
-            <div class="choose-user-container" onclick="welcomeAllF()">
-                <button class="choose-nav-user" id="welcomeBtn" onclick="dropWelcome()">
-                    <p>Bem Vindo, %USERNAME% </p>
-                    <i class="upWelcome fa fa-caret-down"></i> 
-                    <i class="downWelcome fa fa-caret-down fa-rotate-180"></i>
-                </button>
-
-                <div class="choose-user-opt">
-                    <a href="choose.html"><p>Inicio</p></a>
-                    <a href="adm.html"><p>Administração</p></a>
-                    <a href="../index.html"><p>Sair</p></a>
-                </div>
-            </div>
         </nav>
     </header>
 
-    <main class="choose-main-container">
+    <main class="cadastro-main-container">
 
-        <div class="choose-main-text">
-            <h1 class="big-white-normal">Pintou uma Emergência?<br> Use um dos <span class="detalhe">Ramais</span></h1>
-            <p class="small-gray-normal">O ramal só deverá ser usado em último caso (emergências),<br>
-            utilize outras formas de contato, como e-mail ou whatsapp.</p>
+        <h2 class="big-white-normal">Cadastrar Usuário</h2>
 
-            <div class="choose-main-ramal">
-                <button class="btnPrincipal"><a href="ramais.html" class="small-white-normal">Acessar Ramais</a></button>
-                <button class="btnSecond"><a href="#" class="small-white-normal">Ver Tutorial</a></button>
+        <div class="cadastro-form-container">
+
+        <div class="cadastro-1">
+
+            <div>
+                <p class="small-white-normal">Nome*</p>
+                <input type="text" name="" class="normal-input" id="nome-input" required>
             </div>
+
+            <div>
+                <p class="small-white-normal">Setor*</p>
+                <input type="text" name="" class="normal-input" id="setor-input" required>
+            </div>
+
+            <div>
+                <p class="small-white-normal">Ramal*</p>
+                <input type="text" name="" class="normal-input" id="ramal-input" required>
+            </div>
+
         </div>
 
-        <div>
-            <img src="../img/ramal.svg" class="ramais-img" alt="" width="500px">
+        <div class="cadastro-2">
+
+            <div>
+                <p class="small-white-normal">Email*</p>
+                <input type="text" name="" class="normal-input" id="email-input" required>
+            </div>
+
+            <div>
+                <p class="small-white-normal">Telefone*</p>
+                <input type="text" name="" class="normal-input" id="telefone-input" required>
+            </div>
+
+            <div>
+                <p class="small-white-normal">Debug</p>
+                <input type="text" name="" class="normal-input">
+            </div>
+
         </div>
 
+        </div>
+
+        <div class="buttons">
+            <button class="small-white-normal submit-button" onclick="cadastrar()">Cadastrar</button>
+            <button class="small-white-normal cancel-button">Cancelar</button>
+        </div>
 
     </main>
 
-    <script src="../assets/javascript/choose.js"></script>
+    <script src="../assets/javascript/cadastro.js"></script>
 </body>
 
 </html>

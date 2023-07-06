@@ -73,6 +73,16 @@ form.sign-in-form {
   margin-bottom: 10px;
 }
 
+.select-login{
+  border: 0px;
+  background-color: #f0f0f0;
+  border-radius: 55px;
+}
+
+.select-login:focus{
+  outline: 0;
+}
+
 .input-field {
   max-width: 380px;
   width: 100%;
@@ -84,6 +94,28 @@ form.sign-in-form {
   grid-template-columns: 15% 85%;
   padding: 0 0.4rem;
   position: relative;
+}
+
+.input-field-s {
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 0px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+  border-radius: 55px;
+}
+
+.input-field-s i{
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
 }
 
 .input-field i {
@@ -239,6 +271,8 @@ form.sign-in-form {
 .atention-index{
   font-size: 10px;
   color: white;
+  display: flex;
+  gap: 5px;
 }
 
 .btn.transparent {

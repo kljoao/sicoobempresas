@@ -46,62 +46,6 @@
     border-radius: 150px;
 }
 
-.choose-nav-user{
-    display: flex;
-    background: none;
-    border: 0px;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-.choose-user-container{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.choose-user-opt{
-    position: absolute;
-    margin-top: 20px;
-    margin-left: 5px;
-    z-index: 1000;
-    background-color: #00AE9D;
-    width: 185px;
-    height: 0px;
-    transition: .6s;
-    visibility: hidden;
-    overflow-y: hidden;
-    border-radius: 0px 0px 20px 20px;
-}
-
-.choose-user-opt p{
-    color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    margin-top: 10px;
-}
-
-.downWelcome{
-    display: none;
-}
-
-.upWelcome{
-    display: block;
-}
-
-#welcomeBtn.ativoW .downWelcome{
-    display: block;
-}
-
-#welcomeBtn.ativoW .upWelcome{
-    display: none;
-}
-
-.choose-user-container.ativoW .choose-user-opt{
-    height: 98px;
-    visibility: visible;
-}
-
 .choose-main-container{
     margin-top: 90px;
     display: flex;

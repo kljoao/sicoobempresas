@@ -23,7 +23,7 @@
                 <div>
                     <ul class="choose-nav-list">
                         <li>
-                            <a href="choose.html">Início</a>
+                            <a href="index.html">Início</a>
                         </li>
                         <li>
                             <a href="#">Ramais</a>
@@ -43,36 +43,19 @@
                     </ul>
                 </div>
             </div>
-
-            <div class="choose-user-container" onclick="welcomeAllF()">
-                <button class="choose-nav-user" id="welcomeBtn" onclick="dropWelcome()">
-                    <p>Bem Vindo, %USERNAME% </p>
-                    <i class="upWelcome fa fa-caret-down"></i> 
-                    <i class="downWelcome fa fa-caret-down fa-rotate-180"></i>
-                </button>
-
-                <div class="choose-user-opt">
-                    <a href="choose.html"><p>Inicio</p></a>
-                    <a href="adm.html"><p>Administração</p></a>
-                    <a href="../index.html"><p>Sair</p></a>
-                </div>
-            </div>
         </nav>
     </header>
 
-    <main>
+    <main onload="listar()">
 
-        <div class="ramais-search-container">
-            <h1 class="big-white-normal">BUSCAR RAMAL</h1>
-            <input type="search" class="ramais-search" placeholder="Digite o nome, setor ou ramal para localizar o(a) colaborador(a)">
-        </div>
+        <div class="ramal-princ">
 
-    <div class="ramal-princ">
 
         </div>
+
     </main>
 
-    <script src="../assets/javascript/choose.js"></script>
+
     <script src="../assets/javascript/ramais.js"></script>
 </body>
 

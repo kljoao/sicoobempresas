@@ -1,96 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicoob Empresas - Lotus</title>
+    <!-- LINKS FONT AWESOME / SWEET ALERTS -->
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="assets/css/login.css" />
-    <title>Sicoob Empresas - Lotus</title>
-  </head>
-  <body class="login-body">
-    <div class="container">
-      <div class="forms-container">
-        <div class="signin-signup">
-          <form action="#" class="sign-in-form">
-            <h2 class="title">Entrar</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="E-mail Corporativo" />
+    <!-- LINKS FONT AWESOME / SWEET ALERTS -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="choose-body">
+
+    <section class="mobile-error">
+        <img src="../img/error-cel.svg" alt="" width="400px" class="mobile-error-img">
+        <br>
+        <br>
+        <h1 class="big-white-normal">ERROR 404</h1>
+        <p class="small-white-normal">Esse sistema só pode ser acessado via desktop.</p>
+    </section>
+
+    <header class="choose-header">
+
+        <nav class="choose-nav">
+            <div class="choose-nav-container">
+                <a href="choose.html"><img src="../img/logo.png" alt="" width="150px"></a>
+
+                <div>
+                    <ul class="choose-nav-list">
+                        <li>
+                            <a href="index.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="#">Ramais</a>
+                        </li>
+                        <li>
+                            <a href="#">Helpdesk</a>
+                        </li>
+                        <li>
+                            <a href="#">Tutoriais</a>
+                        </li>
+                        <li>
+                            <a href="#">Novidades</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Senha" />
+        </nav>
+    </header>
+
+    <main class="choose-main-container">
+
+        <div class="choose-main-text">
+            <h1 class="big-white-normal">Pintou uma Emergência?<br> Use um dos <span class="detalhe">Ramais</span></h1>
+            <p class="small-gray-normal">O ramal só deverá ser usado em último caso (emergências),<br>
+            utilize outras formas de contato, como e-mail ou whatsapp.</p>
+
+            <div class="choose-main-ramal">
+                <button class="btnPrincipal"><a href="pages/ramais.html" class="small-white-normal">Acessar Ramais</a></button>
+                <button class="btnSecond"><a href="#" class="small-white-normal">Ver Tutorial</a></button>
             </div>
-            <input type="submit" value="Login" class="btn solid" />
-          </form>
-          <form action="#" class="sign-up-form">
-            <h2 class="title">Registrar</h2>
-
-            <p class="invalidName">O nome digitado é inválido.</p>
-            <div class="input-field">
-              <i class="name-color fas fa-user"></i>
-              <input type="text" name="nome" placeholder="Nome Completo*" minlength="8" maxlength="60" id="name" required onkeydown="checkName()" oninvalid="setCustomValidity(' ')"/>
-            </div>
-
-            <p class="invalidCPF">CPF não é válido.</p>
-            <div class="input-field">
-              <i class="cpf-color fas fa-id-card"></i>
-              <input type="text" placeholder="CPF*" id="cpf" minlength="14" maxlength="14" class="corporate-name" required onkeydown="checkCPF()"/>
-            </div>
-
-            <p class="invalidEmail">O e-mail digitado é inválido.</p>
-            <div class="input-field">
-              <i class="emailColor fas fa-envelope"></i>
-              <input type="text" name="email" placeholder="Email*"  maxlength="60" class="emailInput" onkeydown="checkEmail(email)">
-            </div>
-
-            <p class="invalidConfirmEmail">Os e-mails não conferem.</p>
-            <div class="input-field">
-              <i class="confirmColor fas fa-envelope"></i>
-              <input type="email" placeholder="Confirme o Email*" required class="email-confirm" onkeydown="checkEmailConfirm()"/>
-            </div>
-
-            <p class="invalidCell">Númeo de telefone inválido.</p>
-            <div class="input-field">
-              <i class="cellphoneColor fas fa-phone"></i>
-              <input type="email" placeholder="Seu telefone com DDD*" maxlength="15" name="telefone" required class="cellphone" onkeydown="checkCell(telefone)"/>
-            </div>
-
-            <p class="atention-index">*Em caso de erros de digitação, o processo pode levar até 3 dias.</p>
-
-            <a href="pages/choose.html" style="color: #ffffff;">TRANSFER ALL !REMOVER</a>
-
-            <input type="submit" class="btn" value="Cadastrar" name="BtnCad" onclick="cadastrar(event)"/>
-          </form>
         </div>
-      </div>
 
-      <div class="panels-container">
-        <div class="panel left-panel">
-          <div class="content">
-            <a href="index.html"><img src="img/empresas.png" alt="" class="logo-img"></a>
-            <h3>Novo por aqui?</h3>
-            <p>
-              Cadastre-se já clicando no botão abaixo. 
-              É rápido e simples.
-            </p>
-            <button class="btn transparent" id="sign-up-btn" onclick="alternLoginButton()">Cadastre-se</button>
-          </div>
+        <div>
+            <img src="../img/ramal.svg" class="ramais-img" alt="" width="500px">
         </div>
-        <div class="panel right-panel">
-          <div class="content">
-            <a href="index.html"><img src="img/empresas.png" alt="" class="logo-img"></a>
-            <h3>Já é cadastrado?</h3>
-            <p>
-              Acesse sua conta fácil e rápido clicando no botão abaixo. 
-            </p>
-            <button class="btn transparent" id="sign-in-btn" onclick="alternLoginButton()">Logar</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <script src="assets/javascript/login.js"></script>
-  </body>
+
+    </main>
+
+    <script src="../assets/javascript/choose.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,52 @@
+.cadastro-main-container{
+    margin: 90px;
+}
+
+.cadastro-form-container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.normal-input{
+    border: 1px;
+    height: 15px;
+    border-radius: 5px;
+    width: 350px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.normal-input:focus{
+    outline: 0;
+}
+
+.submit-button, .cancel-button{
+    border: 0px;
+    background-color: rgb(0, 183, 255);
+    padding: 10px;
+    border-radius: 5px;
+    width: 370px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit-button:hover{
+    background-color: rgb(0, 141, 197);
+}
+
+.cancel-button{
+    background-color: red;
+}
+
+.cancel-button:hover{
+    background-color: rgb(185, 0, 0);
+}
+
+.buttons{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
