@@ -52,7 +52,7 @@ const emailInput = document.querySelector('#email-input');
 let validEmail = false;
 
 emailInput.addEventListener('keydown', () => {
-    if(emailInput <= 5 ){
+    if(emailInput.value.length <= 5 ){
         emailInput.setAttribute('style', 'outline: 3px solid red;');
         validEmail = false;
     }
@@ -76,6 +76,8 @@ telefoneInput.addEventListener('keydown', () => {
     }
 })
 
+const paInput = document.querySelector('#pa-input')
+
 function cadastrar(){
     if(validNome && validSetor && validRamal && validEmail && validTell == true){
         const data = {
@@ -84,40 +86,40 @@ function cadastrar(){
             Setor: setorInput.value,
             Ramal: ramalInput.value,
             Cell: telefoneInput.value,
-          }
-      
-          fetch("https://localhost:7232/Categorias", {
+            PA: paInput.value,
+          };
+          
+          fetch("https://localhost:5092/api/FormData", {
             method: "POST",
-            mode: 'cors',
             headers: {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
-          }).then((response) => response.json())
-          .then((result) => {
-            Swal.fire({
+          })
+            .then((response) => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error('Erro na requisição.');
+              }
+            })
+            .then((result) => {
+              Swal.fire({
                 position: 'top-end',
                 icon: 'success',
                 title: 'Usuário Cadastrado',
                 showConfirmButton: false,
                 timer: 1500
-              })
-          })
-          .catch((error) => {
-            Swal.fire({
-            icon: 'error',
-            title: 'Problema Verificado',
-            text: 'Contate um administrador para a resolução do problema.',
-            footer: '<a href="">Clique aqui e tente novamente.</a>'
-          })
-          });
-        }
-        else{
-          Swal.fire({
-            icon: 'error',
-            title: 'Problema Verificado',
-            text: 'As informações não são válidas, verifique os campos e tente novamente.',
-            footer: '<a href="">Clique aqui e tente novamente.</a>'
-          })
+              });
+            })
+            .catch((error) => {
+              Swal.fire({
+                icon: 'error',
+                title: 'Problema Verificado',
+                text: 'Contate um administrador para a resolução do problema.',
+                footer: '<a href="">Clique aqui e tente novamente.</a>'
+              });
+            });
+          
     }
 }

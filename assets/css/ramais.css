@@ -2,6 +2,8 @@
     margin: 40px 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
     gap: 50px;
 }
 
@@ -30,6 +32,7 @@
 .ramal-email{
     border-top: 1px solid rgba(0, 0, 0, 0.336);
     padding: 10px;
+    margin-bottom: -15px;
 }
 
 .ramal-telefone{
@@ -46,7 +49,11 @@
     margin-top: 10px;
     padding: 10px;
     border: 0px;
-    border-radius: 50px;
-    width: 450px;
+    border-radius: 20px;
+    width: 500px;
     height: 40px;
+}
+
+.ramais-search:focus{
+    outline: 0;
 }

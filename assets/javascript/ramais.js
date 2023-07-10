@@ -1,5 +1,5 @@
 function listar(){
-    fetch("https://localhost:7232/Categorias", {
+    fetch("https://localhost:5092/api/FormData", {
       method: "GET",
       mode: 'cors',
       headers: {
@@ -26,8 +26,9 @@ function renderizar(Categorias){
         let linha = `
         <div class="ramal-card-container">
             <div class="ramal-top">
-                <h2 class="big-white-normal">${categoria.nome}</h2>
+                <h2 class="medium-white-normal">${categoria.nome}</h2>
                 <p class="small-white-normal">${categoria.setor}</p>
+                <p class="small-white-normal">PA - ${categoria.pa}</p>
             </div>
             <div class="ramal-bottom">
                 <p class="ramal-telefone more-small-black-normal">Ramal</p>
