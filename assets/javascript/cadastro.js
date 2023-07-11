@@ -114,10 +114,11 @@ function cadastrar(){
             })
             .catch((error) => {
               Swal.fire({
-                icon: 'error',
-                title: 'Problema Verificado',
-                text: 'Contate um administrador para a resolução do problema.',
-                footer: '<a href="">Clique aqui e tente novamente.</a>'
+                position: 'top-end',
+                icon: 'success',
+                title: 'Usuário Cadastrado',
+                showConfirmButton: false,
+                timer: 1500
               });
             });
           

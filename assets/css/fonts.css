@@ -34,6 +34,13 @@
     font-size: 15px;
 }
 
+.small-sub-white-normal{
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
 .more-small-black-normal{
     color: #000000;
     font-family: 'Roboto', sans-serif;
