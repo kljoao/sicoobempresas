@@ -54,6 +54,31 @@
             <input type="text" class="ramais-search" placeholder="Digite o nome do colaborador">
         </div>
 
+        <div id="modal-editar" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="fecharModalEditar()">&times;</span>
+              <h2>Editar Informações</h2>
+              <form id="form-editar">
+                <label for="edit-nome">Nome:</label>
+                <input type="text" id="edit-nome" name="edit-nome">
+          
+                <label for="edit-setor">Setor:</label>
+                <input type="text" id="edit-setor" name="edit-setor">
+          
+                <label for="edit-email">Email:</label>
+                <input type="email" id="edit-email" name="edit-email">
+          
+                <label for="edit-cell">Celular:</label>
+                <input type="text" id="edit-cell" name="edit-cell">
+          
+                <label for="edit-pa">PA:</label>
+                <input type="text" id="edit-pa" name="edit-pa">
+          
+                <button type="submit">Salvar</button>
+              </form>
+            </div>
+          </div>
+
         <div class="ramal-princ">
 
         </div>
