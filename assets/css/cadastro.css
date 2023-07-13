@@ -51,3 +51,16 @@
     flex-direction: column;
     gap: 10px;
 }
+
+#setor, #pa{
+    border: 0px;
+    width: 370px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#setor, #pa:focus{
+    outline: 0;
+}

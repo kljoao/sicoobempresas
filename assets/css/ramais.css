@@ -60,19 +60,52 @@
 
 .ramal-buttons{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 15px;
 }
 
 .ramal-button-edit, .ramal-button-remove{
     border: 0px;
     padding: 10px 40px;
-    border-radius: 50px;
+    border-radius: 5px;
+    width: 290px;
     background-color: rgb(0, 153, 255);
     cursor: pointer;
+    transition: .4s;
+}
+
+.ramal-button-edit:hover{
+    background-color: rgb(0, 101, 168);
 }
 
 .ramal-button-remove{
     background-color: red;
+}
+
+.ramal-button-remove:hover{
+    background-color: rgb(151, 0, 0);
+}
+
+.remove-btn{
+    color: #ffffff;
+}
+
+.cad-user{
+    color: white;
+    padding: 10px;
+}
+
+.cad-btn{
+    background-color: rgb(0, 153, 255);
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: .3s;
+}
+
+.cad-btn:hover{
+    background-color: rgb(0, 116, 194);
 }

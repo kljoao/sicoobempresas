@@ -30,16 +30,6 @@ function excluir(ramal){
         },
       }).then((response) => response.json())
       .then((result) => {
-          Swal.fire({
-            position: 'top-end',
-            icon: 'sucess',
-            title: 'Credenciais Corretas',
-            showConfirmButton: false,
-            timer: 1500
-          });
-          window.reload();
-      })
-      .catch((error) => {
         Swal.fire({
           position: 'top-end',
           icon: 'error',
@@ -47,17 +37,17 @@ function excluir(ramal){
           showConfirmButton: false,
           timer: 1500
         });
-        window.reload();
-    })
-    }else{
+      })
+      .catch((error) => {
         Swal.fire({
-            position: 'top-end',
-            icon: 'error',
-            title: 'Credenciais Inválidas',
-            showConfirmButton: false,
-            timer: 1500
-          });
-    }
+          position: 'top-end',
+          icon: 'success',
+          title: 'Usuário Excluído.',
+          showConfirmButton: false,
+          timer: 1500
+        });
+    })
+  }
 }
 
 function renderizar(Categorias){
@@ -78,8 +68,8 @@ function renderizar(Categorias){
             <p class="ramal-email more-small-black-normal"><i class="fa fa-envelope"></i> | ${categoria.email}</p>
             <p class="ramal-telefone more-small-black-normal"><i class="fa fa-phone fa-rotate-90"></i> | ${categoria.cell}</p>
             <div class="ramal-buttons">
-                <button class="ramal-button-edit small-white-normal" onclick="abrirModalEditar()">Editar</button>
-                <button class="ramal-button-remove small-white-normal"><a href="javascript: excluir(${categoria.ramal})">Excluír</button>
+                <button class="ramal-button-edit small-white-normal" onclick="abrirModalEditar(1)">Editar</button>
+                <button class="ramal-button-remove small-white-normal"><a class="remove-btn" href="javascript: excluir(${categoria.ramal})">Excluír</button>
             </div>
         </div>
     </div>
@@ -114,4 +104,4 @@ function verificarCredenciais(event) {
     }
   }
 
-  cadastramento.addEventListener('click', verificarCredenciais)
+  cadastramento.addEventListener('click', verificarCredenciais);
