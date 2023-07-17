@@ -6,6 +6,8 @@
 /* FONTS IMPORTS */
 
 /* CSS IMPORT */
+@import url(assets/css/index.css);
+@import url(assets/css/footer.css);
 @import url(assets/css/mobile-error.css);
 @import url(assets/css/choose.css);
 @import url(assets/css/fonts.css);

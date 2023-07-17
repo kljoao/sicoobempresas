@@ -1,0 +1,15 @@
+.index-apresent{
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.index-apresent img{
+    max-width: 450px;
+}
+
+.index-btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
