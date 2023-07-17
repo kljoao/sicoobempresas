@@ -63,14 +63,13 @@ function cadastrar() {
       });
     })
     .catch((error) => {
-      alert(
       Swal.fire({
         position: 'top-end',
         icon: 'success',
         title: 'Usuário Cadastrado',
         showConfirmButton: false,
         timer: 1500
-      }));
+      });
       window.location.reload(true);
     });
 

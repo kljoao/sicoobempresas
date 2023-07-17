@@ -54,12 +54,47 @@
 
         <div class="ramais-search-container">
             <h1 class="pesquisa-ramal-text big-asap-normal">PESQUISAR COLABORADOR</h1>
-            <input type="text" class="ramais-search" placeholder="Digite o nome do colaborador">
+            <select id="criterio-pesquisa" class="ramal-options">
+                <option value="Selecione">Selecionar Pesquisa</option>
+                <option value="nome">Nome</option>
+                <option value="ramal">Ramal</option>
+                <option value="pa">PA</option>
+              </select>
+            <input type="text" id="pesquisa-input" class="ramais-search" placeholder="Digite o nome do colaborador">
         </div>
 
         <div class="ramal-princ">
 
         </div>
+
+        <div class="modal-overlay">
+            <div class="modal-container">
+                <h2>Editar Informações</h2>
+                <form id="editForm">
+                    <label for="nome" class="medium-white-normal">Nome:</label>
+                    <input type="text" id="nome" required>
+    
+                    <label for="setor" class="medium-white-normal">Setor:</label>
+                    <input type="text" id="setor" required>
+    
+                    <label for="pa" class="medium-white-normal">PA:</label>
+                    <input type="text" id="pa" required>
+    
+                    <label for="ramal" class="medium-white-normal">Ramal:</label>
+                    <input type="text" id="ramal" required>
+    
+                    <label for="email" class="medium-white-normal">E-mail:</label>
+                    <input type="text" id="email" required>
+    
+                    <label for="telefone" class="medium-white-normal">Telefone:</label>
+                    <input type="text" id="telefone" required>
+    
+                    <button type="submit">Salvar</button>
+                    <button type="button" id="fecharModal">Cancelar</button>
+                </form>
+            </div>
+        </div>
+    
 
     </main>
 
