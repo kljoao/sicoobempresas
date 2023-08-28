@@ -13,7 +13,6 @@ function formatarTelefone() {
   // Remove todos os caracteres não numéricos
   const numeroTelefone = telefoneInput.value.replace(/\D/g, '');
 
-  // Verifica se o número de telefone tem pelo menos 10 dígitos
   if (numeroTelefone.length >= 10) {
     // Formata o número de telefone
     const numeroFormatado = `(${numeroTelefone.substring(0, 2)}) ${numeroTelefone.substring(2, 7)}-${numeroTelefone.substring(7, 11)}`;
@@ -41,7 +40,7 @@ function cadastrar() {
     PA: pa.value
   };
 
-  fetch("https://localhost:5092/api/FormData", {
+  fetch("https://192.168.32.10:5092/api/FormData", {
     method: "POST",
     headers: {
       'Content-Type': 'application/json'
@@ -70,7 +69,6 @@ function cadastrar() {
         showConfirmButton: false,
         timer: 1500
       });
-      window.location.reload(true);
     });
 
 }

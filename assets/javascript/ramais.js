@@ -1,7 +1,7 @@
 let categorias = []; // Variável para armazenar a lista de categorias
 
 function listar() {
-  fetch("https://localhost:5092/api/FormData", {
+  fetch("https://192.168.32.10:5092/api/FormData", {
     method: "GET",
     mode: 'cors',
     headers: {
@@ -26,32 +26,58 @@ function excluir(ramal) {
   var login = prompt("Digite o login:");
   var senha = prompt("Digite a senha:");
   if (login === "sicoobEmpresas" && senha === "myNGim9RFRj3dVyMdI6Jc2@Dh%GAY1") {
-    fetch("https://localhost:5092/api/FormData/" + ramal, {
+    fetch("https://192.168.32.10:5092/api/FormData/" + ramal, {
       method: "DELETE",
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json'
       },
     })
-    .then((response) => response.json())
-    .then((result) => {
+    .then(response => {
+      if (response.ok) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Usuário Excluído.',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        window.location.reload(true);
+      } else if (response.status === 404) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'error',
+          title: 'Formulário não encontrado.',
+          showConfirmButton: false,
+          timer: 1500
+        });
+      } else {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'error',
+          title: 'Erro ao excluir o usuário.',
+          showConfirmButton: false,
+          timer: 1500
+        });
+      }
+    })
+    .catch(error => {
+      console.error('Erro na solicitação:', error);
       Swal.fire({
         position: 'top-end',
         icon: 'error',
-        title: 'Credenciais Inválidas',
+        title: 'Erro ao processar a solicitação.',
         showConfirmButton: false,
         timer: 1500
       });
-    })
-    .catch((error) => {
-      Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Usuário Excluído.',
-        showConfirmButton: false,
-        timer: 1500
-      });
-      window.location.reload(true);
+    });
+  } else {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'error',
+      title: 'Credenciais Inválidas',
+      showConfirmButton: false,
+      timer: 1500
     });
   }
 }
@@ -96,10 +122,6 @@ pesquisaInput.addEventListener('input', pesquisar);
 const criterioPesquisa = document.querySelector('#criterio-pesquisa');
 criterioPesquisa.addEventListener('change', pesquisar);
 
-function pesquisar() {
-  // Implemente a lógica de pesquisa aqui, se necessário
-}
-
 // Função executada quando o botão "Excluir" é clicado
 function verificarCredenciais(event) {
   var login = prompt("Digite o login:");
@@ -107,7 +129,7 @@ function verificarCredenciais(event) {
 
   if (login === "sicoobEmpresas" && senha === "myNGim9RFRj3dVyMdI6Jc2@Dh%GAY1") {
     alert("Credenciais corretas!");
-    // Coloque aqui o código para realizar a exclusão
+    
   } else {
     Swal.fire({
       position: 'top-end',
@@ -208,7 +230,7 @@ editForm.addEventListener('submit', (event) => {
   };
 
   // Envia os dados atualizados para o servidor via requisição PUT
-  fetch("https://localhost:5092/api/FormData/" + formDataObject.ramal, {
+  fetch("https://192.168.32.10:5092/api/FormData/" + formDataObject.ramal, {
     method: 'PUT',
     mode: 'cors',
     headers: {
